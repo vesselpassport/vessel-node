@@ -12,10 +12,18 @@ $ yarn add vessel-node
 ```
 
 ## Usage
+### `Vessel()`
+To create an instance of Vessel, type save `new Vessel()` somewhere you can access it throughout your code base.
 
-[TODO]
+### `Vessel.addPermittedScope(<server_name>)`
+This function takes in a string of the server name to accept JWTs for.
 
-### Example usage
+__Must be called at least one time before calling `Vessel.getWeb3UserContext()`.__
+
+### `Vessel.getWeb3UserContext(<cookies_object>)`
+This function takes in an object with the shape `{ cookie_name: 'cookie_value' }`. With ExpressJS, this corresponds to `req.cookies`.
+
+## Example
 Configure a permitted server name scope for incoming sessions:
 NOTE: This should match your TLS certificate hostname
 ```typescript
