@@ -25,10 +25,10 @@ const decodeValidWeb3Token = (token, getEcPubKey) => {
 
     if (!jwt || jwt.header.alg !== 'ES256' || jwt.header.typ !== 'JWT') {
       return null;
-    } // Check if payload is valid and not expired
+    } // Check token exists and is not expired
 
 
-    if (!jwt || !jwt.payload.exp || !jwt.payload.iat || jwt.payload.exp < Date.now() || jwt.payload.iat > Date.now()) {
+    if (!jwt || !jwt.payload.exp || jwt.payload.exp * 1000 < Date.now()) {
       return null;
     } // Check signature
 
