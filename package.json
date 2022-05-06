@@ -1,0 +1,56 @@
+{
+  "name": "vessel-node",
+  "version": "1.0.0",
+  "description": "Vessel utilities",
+  "types": "./types/lib/index.d.ts",
+  "main": "./dist/index.js",
+  "exports": {
+    "require": "./dist/index.js",
+    "import": "./module.mjs"
+  },
+  "files": [
+    "dist/**/*",
+    "types/**/*",
+    "module.mjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vesselpassport/vessel-node.git"
+  },
+  "scripts": {
+    "build": "rm -rf dist types && babel lib --out-dir dist --extensions '.ts' && tsc --declaration --outDir types --emitDeclarationOnly",
+    "lint": "eslint --fix lib tests",
+    "lint:check": "eslint lib tests",
+    "test": "jest"
+  },
+  "author": "Stytch",
+  "bugs": {
+    "url": "git://github.com/vesselpassport/vessel-node/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/crypto-js": "^4.1.1",
+    "@types/elliptic": "^6.4.14",
+    "@types/jest": "^27.0.2",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/node": "^15.14.9",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.2.4",
+    "prettier": "2.4.1",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "elliptic": "^6.5.4",
+    "jsonwebtoken": "^8.5.1"
+  }
+}
