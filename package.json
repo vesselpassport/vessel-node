@@ -1,5 +1,5 @@
 {
-  "name": "vessel",
+  "name": "vessel-node",
   "version": "1.0.0",
   "description": "Vessel utilities",
   "types": "./types/lib/index.d.ts",
