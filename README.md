@@ -54,3 +54,6 @@ SMS: ${verifiedSMS}`);
   return res.status(200).send(web3Session);
 };
 ```
+
+## Support
+Have questions while integrating Vessel into your app? Reach out to us at developers@vessel.xyz!
