@@ -1,8 +1,8 @@
 {
   "name": "vessel-node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vessel utilities",
-  "types": "./types/lib/index.d.ts",
+  "types": "./types/index.d.ts",
   "main": "./dist/index.js",
   "exports": {
     "require": "./dist/index.js",
@@ -23,7 +23,7 @@
     "lint:check": "eslint lib tests",
     "test": "jest"
   },
-  "author": "Stytch",
+  "author": "Vessel",
   "bugs": {
     "url": "git://github.com/vesselpassport/vessel-node/issues"
   },
